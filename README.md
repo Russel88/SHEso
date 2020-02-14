@@ -25,3 +25,11 @@ More info is in the script
 ```sh
 ./dist_nearest.sh File1 File2
 ```
+
+## wavg_by_group.sh
+Weighted average by group. Input is a whitespace-delimted file with three columns: Grouping factor, value to average, weight. 
+Output is the weighted average of the second column for each unique value in the first column
+
+```sh
+./wavg_by_group.sh File.tab
+```
