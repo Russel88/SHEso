@@ -30,7 +30,7 @@
 join -j 1 <(sort -k1,1 ${1}) <(sort -k1,1 ${2}) \
     | awk '{print $1,$2,$5,$3-$7,$6-$4}' \
     | awk 'function abs(v) {return v < 0 ? -v : v} \
-                            function min(v,w) {{if( v < w ) { MIN=v } if( w < v ) { MIN=w } }{ return MIN }} \
-                            ($4 > 0 || $5 > 0) {print $1,$2,$3,min(abs($4),abs($5))} \
+                            function min(v,w) {{if( v < w ) { MIN=v } if( w <= v ) { MIN=w } }{ return MIN }} \
+                            ($4 >= 0 || $5 >= 0) {print $1,$2,$3,min(abs($4),abs($5))} \
                             ($4 < 0 && $5 < 0) {print $1,$2,$3,0}'
 
