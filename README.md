@@ -31,7 +31,7 @@ Weighted average by group. Input is a whitespace-delimted file with three column
 Output is the weighted average of the second column for each unique value in the first column
 
 ```sh
-./ wavg_by_group.sh File.tab
+./wavg_by_group.sh File.tab
 ```
 ## mult2single.sh
 Multiline fasta to single line fasta
@@ -47,4 +47,9 @@ Extract sequences from multi fasta with a list of IDs
 ./fastabyid.sh File.fasta IDs.txt
 ```
 
+## split_multifasta.sh
+Split a multi-fasta into single fasta files. Names will correspond to fasta headers with .fa extension
 
+```sh
+./split_multifasta.sh File.fasta
+```
