@@ -53,3 +53,10 @@ Split a multi-fasta into single fasta files. Names will correspond to fasta head
 ```sh
 ./split_multifasta.sh File.fasta
 ```
+
+## split_multifasta2.sh
+Split a multi-fasta into chunks with a set number of sequences in each. Names will be 3rd argument followed by a number with .fna extension
+
+```sh
+./split_multifasta2.sh File.fasta 1000 chunk
+```
